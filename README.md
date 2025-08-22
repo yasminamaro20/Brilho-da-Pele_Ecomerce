@@ -5,7 +5,14 @@ O projeto **Brilho na Pele** é um site de venda de maquiagens, onde os usuário
 O objetivo é oferecer uma experiência simples, bonita e funcional, utilizando consumo de APIs para complementar informações (ex: CEP e produtos).
 
 ## 🎯 Justificativa
-Este sistema foi desenvolvido como parte de uma atividade educacional para:
+Um site de beleza oferece uma plataforma para compartilhar dicas, tendências e produtos de cuidado pessoal. Pode incluir:
+
+- Dicas de maquiagem e cuidados com a pele
+- Tendências de moda e estilo
+- Avaliações de produtos de beleza
+- Tutoriais e vídeos instrutivos
+
+O objetivo é ajudar as pessoas a se sentirem mais confiantes e bonitas. Você gostaria de saber mais sobre como criar conteúdo para um site de beleza?
 - Praticar consumo de APIs públicas.
 - Estruturar um projeto web com HTML, CSS, JavaScript e Bootstrap.
 - Exercitar boas práticas de versionamento com Git e GitHub.
