@@ -22,9 +22,9 @@ Este sistema foi desenvolvido como parte de uma atividade educacional para:
 - [Fake Store API](https://fakestoreapi.com/) → simulação de produtos e preços.  
 - [ViaCEP](https://viacep.com.br/) → preenchimento automático de endereço no checkout.  
 
-## 🖼️ Protótipo (Wireframe)
-Os wireframes estão disponíveis na pasta `/wireframes`.
+## 🖼️ Protótipo (canva)
+Os wireframes estão disponíveis na pasta `/canva`.
 
-![Wireframe da Loja](wireframes/prototipo.png)
+https://www.canva.com/design/DAGw0TmVnL8/NzDvVbW9fQiscRLGjWV9-w/edit
 
 ---
