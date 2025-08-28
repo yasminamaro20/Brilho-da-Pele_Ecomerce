@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Produto - Blush em Bastão</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .container:hover {
+      transform: scale(1.01);
+    }
+
+    .produto {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .produto img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      transition: transform 0.4s ease;
+    }
+
+    .produto img:hover {
+      transform: scale(1.05);
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .preco {
+      font-size: 22px;
+      color: #d62456;
+      margin: 15px 0;
+    }
+
+    button, .favorito {
+      background-color: #d62456;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover, .favorito:hover {
+      background-color: #a7183f;
+    }
+
+    .cep-box {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 200px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .resultado {
+      margin-top: 10px;
+    }
+
+    /* Estrelas */
+    .estrelas {
+      display: flex;
+      gap: 5px;
+      font-size: 24px;
+      cursor: pointer;
+      margin: 15px 0;
+    }
+
+    .estrela {
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+
+    .estrela.ativa {
+      color: gold;
+    }
+
+    /* Favorito */
+    .favorito {
+      font-size: 18px;
+      background: none;
+      color: #d62456;
+      border: none;
+      margin-left: 10px;
+    }
+
+    .favorito.ativo {
+      color: red;
+      transform: scale(1.2);
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .produto {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .info {
+        width: 100%;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="produto">
+      <img src="img/WELLA BLONDE RECHARGE CONDICIONADOR 200ML (UN).webp" alt="Blush Stick">
+      <div class="info">
+        <h1>WELLA BLONDE RECHARGE CONDICIONADOR 200ML (UN)
+          <button class="favorito" onclick="toggleFavorito(this)">♡</button>
+        </h1>
+        <p>Condicionador para cabelos loiros coloridos, naturais ou com mechas.<p>
+        <p><strong>Marca:</strong> Wella</p>
+        <p class="preco"> 119,98</p>
+        <div class="estrelas" id="avaliacao">
+          <span class="estrela" onclick="avaliar(1)">★</span>
+          <span class="estrela" onclick="avaliar(2)">★</span>
+          <span class="estrela" onclick="avaliar(3)">★</span>
+          <span class="estrela" onclick="avaliar(4)">★</span>
+          <span class="estrela" onclick="avaliar(5)">★</span>
+        </div>
+        <button onclick="alert('Produto adicionado ao carrinho!')">COMPRAR</button>
+      </div>
+    </div>
+<hr style="margin: 40px 0;">
+
+<div class="descricao-longa">
+  <h2>📄 DESCRIÇÃO LONGA</h2>
+  <p style="margin-top: 10px;"><strong>WELLA BLONDE RECHARGE CONDICIONADOR 200ML
+</strong></p>
+  <p>Neutraliza os tons amarelados e acobreados indesejados. Assim, além de desembaraçar, mantém a cor bonita e com muito brilho pois possui pigmentos violeta.
+
+Tem uma fragrância floral deliciosa, com lírio do vale, rosas, sândalo e baunilha como acordes olfativos. Além disso, garante maciez aos fios. Seu cabelo fica com a cor linda, brilhante, sedoso e perfumado.
+
+Ação:
+Pigmentos Violeta: neutralizam os tons amarelados indesejados.
+
+
+Modo de usar:
+Aplique o condicionador sobre o cabelo limpo e úmido, pelo comprimento e pontas. Depois de alguns instantes, enxágue. </p>
+  
+<hr style="margin: 40px 0;">
+
+<div class="reviews">
+
+    <div class="cep-box">
+      <h2>Calcule seu Frete</h2>
+      <input type="text" id="cep" placeholder="Digite o CEP">
+      <button onclick="buscarEndereco()">Calcular</button>
+      <div class="resultado" id="resultado"></div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    // Função de avaliação por estrela
+    function avaliar(nota) {
+      const estrelas = document.querySelectorAll('.estrela');
+      estrelas.forEach((estrela, index) => {
+        estrela.classList.toggle('ativa', index < nota);
+      });
+      alert(`Você avaliou com ${nota} estrela${nota > 1 ? 's' : ''}`);
+    }
+
+    // Função de favorito
+    function toggleFavorito(el) {
+      el.classList.toggle('ativo');
+      el.textContent = el.classList.contains('ativo') ? '❤️' : '♡';
+    }
+
+    // Busca de CEP usando API ViaCEP
+    function buscarEndereco() {
+      const cep = document.getElementById('cep').value.trim();
+      const resultado = document.getElementById('resultado');
+
+      if (!cep || cep.length !== 8 || isNaN(cep)) {
+        resultado.innerHTML = '<p style="color: red;">Digite um CEP válido com 8 números.</p>';
+        return;
+      }
+
+      fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.erro) {
+            resultado.innerHTML = '<p style="color: red;">CEP não encontrado.</p>';
+          } else {
+            resultado.innerHTML = `
+              <p><strong>Endereço:</strong> ${data.logradouro}, ${data.bairro}</p>
+              <p><strong>Cidade:</strong> ${data.localidade} - ${data.uf}</p>
+            `;
+          }
+        })
+        .catch(() => {
+          resultado.innerHTML = '<p style="color: red;">Erro ao buscar o CEP.</p>';
+        });
+    }
+  </script>
+</body>
+</html>
