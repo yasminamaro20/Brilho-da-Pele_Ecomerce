@@ -35,9 +35,6 @@ Os wireframes estão disponíveis na pasta `/canva`.
 https://www.canva.com/design/DAGw0TmVnL8/NzDvVbW9fQiscRLGjWV9-w/edit
 
 # 📑 Casos de Teste - Brilho na Pele
-
-Este documento contém a descrição dos testes planejados para validar o funcionamento do site **Brilho na Pele**.
-
 ---
 
 ## 🔹 CT01 - Link "Entre"
@@ -120,16 +117,6 @@ Este documento contém a descrição dos testes planejados para validar o funcio
 
 ---
 
-📌 **Versionamento dos Testes**
-- Criar branch `testes`:  
-  ```bash
-  git checkout -b testes
-  ```
-- Adicionar arquivos de teste:  
-  ```bash
-  git add tests/casos_teste.md
-  git commit -m "Adiciona casos de teste do site Brilho na Pele"
-  ```
 - Enviar para o repositório remoto:  
   ```bash
   git push origin testes
