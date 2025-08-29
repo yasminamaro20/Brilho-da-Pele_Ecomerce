@@ -117,7 +117,4 @@ https://www.canva.com/design/DAGw0TmVnL8/NzDvVbW9fQiscRLGjWV9-w/edit
 
 ---
 
-- Enviar para o repositório remoto:  
-  ```bash
-  git push origin testes
-  ```
+
