@@ -72,49 +72,35 @@ https://www.canva.com/design/DAGw0TmVnL8/NzDvVbW9fQiscRLGjWV9-w/edit
   2. Verificar preços exibidos nos produtos em destaque.
 - **Resultado Esperado:** Valores devem corresponder ao cadastro.
 
-## 🔹 CT06 - Barra de Busca
-- **Descrição:** Validar a funcionalidade da busca de produtos.
-- **Passos:**
-  1. Digitar "batom" na barra de busca.
-  2. Clicar em "Buscar".
-- **Resultado Esperado:** Produtos relacionados devem ser listados ou exibir mensagem de não encontrado.
 
-## 🔹 CT07 - Consulta de CEP Válido
+## 🔹 CT06 - Consulta de CEP Válido
 - **Descrição:** Validar preenchimento automático de endereço com CEP válido.
 - **Passos:**
   1. Digitar `01001000` no campo CEP.
 - **Resultado Esperado:** Campo "Endereço" deve ser preenchido corretamente.
 
-## 🔹 CT08 - Consulta de CEP Inválido
+## 🔹 CT07 - Consulta de CEP Inválido
 - **Descrição:** Validar comportamento ao inserir CEP inexistente.
 - **Passos:**
   1. Digitar `99999999` no campo CEP.
 - **Resultado Esperado:** Sistema deve exibir mensagem de erro ou não preencher o campo.
 
-## 🔹 CT09 - Responsividade em Celular
-- **Descrição:** Validar layout em dispositivos móveis.
-- **Passos:**
-  1. Abrir o site em um smartphone ou usar ferramenta de DevTools.
-- **Resultado Esperado:** Layout deve se adaptar sem distorções.
-
-## 🔹 CT10 - Responsividade em Tablet
-- **Descrição:** Validar layout em tablets.
-- **Passos:**
-  1. Abrir o site em modo tablet (ex: 768px).
-- **Resultado Esperado:** Cards de produto devem se alinhar em 2 por linha.
-
-## 🔹 CT11 - Acessibilidade das Imagens
+## 🔹 CT08 - Acessibilidade das Imagens
 - **Descrição:** Verificar se todas as imagens possuem atributo `alt`.
 - **Passos:**
   1. Inspecionar o código fonte das imagens.
 - **Resultado Esperado:** Todas as imagens devem conter `alt` descritivo.
 
-## 🔹 CT12 - Navegação por Teclado
+## 🔹 CT09 - Navegação por Teclado
 - **Descrição:** Validar se é possível navegar usando apenas teclado.
 - **Passos:**
   1. Pressionar TAB para navegar entre links e botões.
 - **Resultado Esperado:** Todos os elementos devem ser acessíveis.
 
+  
+## 🔹 CT10 - Barra de Busca
+- *Descrição:* Validar a funcionalidade da busca de produtos.
+- *Passos:*
+  1. Digitar "batom" na barra de busca.
+  2. Clicar em "Buscar".
 ---
-
-
