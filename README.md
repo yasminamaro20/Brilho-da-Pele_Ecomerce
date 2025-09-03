@@ -34,73 +34,59 @@ Os wireframes estão disponíveis na pasta `/canva`.
 
 https://www.canva.com/design/DAGw0TmVnL8/NzDvVbW9fQiscRLGjWV9-w/edit
 
-# 📑 Casos de Teste - Brilho na Pele
----
+## 📋 10 Casos de Teste – Brilho na Pele
 
-## 🔹 CT01 - Link "Entre"
-- **Descrição:** Verificar se o link "Entre" redireciona para `entrar.html`.
-- **Passos:**
-  1. Acessar a página inicial.
-  2. Clicar em "Entre".
-- **Resultado Esperado:** Usuário deve ser redirecionado para a página de login.
+🔹 CT01 – Consulta CEP válido
+**Descrição: Verificar se ao digitar um CEP válido o endereço é exibido.**
+**Pré-condição: Usuário acessa a página de consulta.**
+**Passos:**
+**Digitar 01001000 no campo CEP.**
+**Sair do campo (blur).**
+**Resultado esperado: Campo de endereço exibe Praça da Sé, Sé - São Paulo/SP.**
 
-## 🔹 CT02 - Link "Cadastre-se"
-- **Descrição:** Verificar se o link "cadastre-se" redireciona para `long.html`.
-- **Passos:**
-  1. Acessar a página inicial.
-  2. Clicar em "Cadastre-se".
-- **Resultado Esperado:** Usuário deve ser redirecionado para a página de cadastro.
+## 🔹 CT02 – Consulta CEP inválido
+**Descrição: Verificar comportamento ao digitar CEP com menos de 8 dígitos.**
+**Entrada: 12345**
+**Resultado esperado: Mensagem "CEP inválido".**
 
-## 🔹 CT03 - Links de Categorias
-- **Descrição:** Validar se os links de categorias (Maquiagem, Mãos e Pés, Cabelos) funcionam.
-- **Passos:**
-  1. Acessar a página inicial.
-  2. Clicar em cada link de categoria.
-- **Resultado Esperado:** Deve carregar a página correspondente ou exibir os produtos.
+## 🔹 CT03 – Consulta CEP inexistente
+**Descrição: Verificar se a API retorna erro para CEP inexistente.**
+**Entrada: 99999999**
+**Resultado esperado: Mensagem "CEP não encontrado".**
 
-## 🔹 CT04 - Adicionar Produto ao Carrinho
-- **Descrição:** Verificar se o botão "Adicionar ao Carrinho" redireciona corretamente.
-- **Passos:**
-  1. Acessar a página inicial.
-  2. Selecionar um produto e clicar em "Adicionar ao Carrinho".
-- **Resultado Esperado:** Usuário deve ser levado à página do carrinho referente ao produto.
+## 🔹 CT04 – Erro na API
+**Descrição: Verificar comportamento quando a API ViaCEP estiver fora do ar.**
+**Ação: Desconectar internet e digitar um CEP válido.**
+**Resultado esperado: Mensagem "Erro ao consultar API".**
 
-## 🔹 CT05 - Preços dos Produtos
-- **Descrição:** Conferir se os preços exibidos estão corretos conforme cadastro.
-- **Passos:**
-  1. Acessar a página inicial.
-  2. Verificar preços exibidos nos produtos em destaque.
-- **Resultado Esperado:** Valores devem corresponder ao cadastro.
+## 🔹 CT05 – Link "Entre"
+**Descrição: Verificar se o link "Entre" leva para a página correta.**
+**Passos: Clicar em Entre.**
+**Resultado esperado: Redirecionar para entrar.html.**
 
+## 🔹 CT06 – Link "Cadastre-se"
+**Descrição: Verificar se o link "cadastre-se" funciona corretamente.**
+**Passos: Clicar em cadastre-se.**
+**Resultado esperado: Redirecionar para long.html.**
 
-## 🔹 CT06 - Consulta de CEP Válido
-- **Descrição:** Validar preenchimento automático de endereço com CEP válido.
-- **Passos:**
-  1. Digitar `01001000` no campo CEP.
-- **Resultado Esperado:** Campo "Endereço" deve ser preenchido corretamente.
+## 🔹 CT07 – Busca de produtos
+**Descrição: Verificar se a barra de busca permite digitar um produto.**
+**Passos: Digitar "batom" e clicar em Buscar.**
+**Resultado esperado: Página exibe resultados relacionados (ou mensagem "nenhum produto encontrado").**
 
-## 🔹 CT07 - Consulta de CEP Inválido
-- **Descrição:** Validar comportamento ao inserir CEP inexistente.
-- **Passos:**
-  1. Digitar `99999999` no campo CEP.
-- **Resultado Esperado:** Sistema deve exibir mensagem de erro ou não preencher o campo.
+## 🔹 CT08 – Adicionar produto ao carrinho
+**Descrição: Verificar se botão "Adicionar ao Carrinho" funciona.**
+**Passos:**
+**Clicar em "Adicionar ao Carrinho" no produto Mascavo Shape Stick.**
+**Resultado esperado: Produto é adicionado e aparece no carrinho.**
 
-## 🔹 CT08 - Acessibilidade das Imagens
-- **Descrição:** Verificar se todas as imagens possuem atributo `alt`.
-- **Passos:**
-  1. Inspecionar o código fonte das imagens.
-- **Resultado Esperado:** Todas as imagens devem conter `alt` descritivo.
+## 🔹 CT09 – Redirecionamento para pagamento
+**Descrição: Verificar se ao clicar em pagamento, o usuário é direcionado para a página correta.**
+**Passos: Clicar no link pagamento na navbar.**
+**Resultado esperado: Redirecionar para pagamento.html.**
 
-## 🔹 CT09 - Navegação por Teclado
-- **Descrição:** Validar se é possível navegar usando apenas teclado.
-- **Passos:**
-  1. Pressionar TAB para navegar entre links e botões.
-- **Resultado Esperado:** Todos os elementos devem ser acessíveis.
-
-  
-## 🔹 CT10 - Barra de Busca
-- *Descrição:* Validar a funcionalidade da busca de produtos.
-- *Passos:*
-  1. Digitar "batom" na barra de busca.
-  2. Clicar em "Buscar".
----
+## 🔹 CT10 – Responsividade
+**Descrição: Validar se o site é responsivo em dispositivos móveis.**
+**Passos:**
+**Acessar site no navegador em modo mobile (ex.: 375x667px).**
+**Resultado esperado: Layout adaptado, sem quebra de elementos.**
