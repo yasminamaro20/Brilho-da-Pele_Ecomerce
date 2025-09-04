@@ -64,21 +64,23 @@ https://www.canva.com/design/DAGw0TmVnL8/NzDvVbW9fQiscRLGjWV9-w/edit
 **Passos: Clicar em Entre.**
 **Resultado esperado: Redirecionar para entrar.html.**
 
-## 🔹 CT06 – Link "Cadastre-se"
-**Descrição: Verificar se o link "cadastre-se" funciona corretamente.**
-**Passos: Clicar em cadastre-se.**
-**Resultado esperado: Redirecionar para long.html.**
-
-## 🔹 CT07 – Busca de produtos
-**Descrição: Verificar se a barra de busca permite digitar um produto.**
-**Passos: Digitar "batom" e clicar em Buscar.**
-**Resultado esperado: Página exibe resultados relacionados (ou mensagem "nenhum produto encontrado").**
-
-## 🔹 CT08 – Adicionar produto ao carrinho
-**Descrição: Verificar se botão "Adicionar ao Carrinho" funciona.**
+## 🔹 CT07 – Política de Privacidade
+**Descrição: Verificar se a página de Política de Privacidade funciona corretamente.**
 **Passos:**
-**Clicar em "Adicionar ao Carrinho" no produto Mascavo Shape Stick.**
-**Resultado esperado: Produto é adicionado e aparece no carrinho.**
+**Acessar a página inicial.**
+**Clicar em “Política de Privacidade” no rodapé ou menu.**
+**Resultado esperado:**
+**A página é exibida corretamente.**
+**Todas as informações obrigatórias sobre coleta, uso e proteção de dados estão presentes.**
+
+## 🔹CT09 – Trocas e Devoluções 
+**Descrição: Verificar se a página de Trocas e Devoluções funciona corretamente.**
+**Passos:**
+**Acessar a página inicial.**
+**Clicar em “Política de Trocas e Devoluções”.**
+**Resultado esperado:**
+**A página carrega corretamente e exibe todas as informações.**
+**O botão “Voltar” funciona.**
 
 ## 🔹 CT09 – Redirecionamento para pagamento
 **Descrição: Verificar se ao clicar em pagamento, o usuário é direcionado para a página correta.**
