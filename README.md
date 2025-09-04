@@ -36,7 +36,7 @@ https://www.canva.com/design/DAGw0TmVnL8/NzDvVbW9fQiscRLGjWV9-w/edit
 
 ## 📋 10 Casos de Teste – Brilho na Pele
 
-🔹 CT01 – Consulta CEP válido
+## 🔹 CT01 – Consulta CEP válido
 **Descrição: Verificar se ao digitar um CEP válido o endereço é exibido.**
 **Pré-condição: Usuário acessa a página de consulta.**
 **Passos:**
