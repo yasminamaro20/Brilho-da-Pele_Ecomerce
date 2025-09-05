@@ -24,44 +24,44 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fs-3 fw-bold" href="#">Brilho na Pele</a>
-      <form class="d-flex w-50">
-        <input class="form-control me-2" type="search" placeholder="O que você procura?" aria-label="Search">
-        <button class="btn btn-danger">Buscar</button>
-      </form>
-    </div>
+    <div class="container d-flex justify-content-between align-items-center">
 
-    <div class="menu d-flex justify-content-end align-items-center gap-4 p-2">
-      <div class="menu-item d-flex align-items-center gap-2">
-        <i class="fa-regular fa-user"></i>
-        <div>
-          <div><a href="entrar.html">Entre</a> ou</div>
-          <div><a href="long.html">cadastre-se</a></div>
+      <!-- Logo -->
+      <a class="navbar-brand fs-3 fw-bold text-danger" href="#">Brilho na Pele</a>
+
+     <!-- Busca -->
+<form class="d-flex w-50" action="buscar.html" method="get">
+  <input class="form-control me-2" type="search" name="q" placeholder="O que você procura?" aria-label="Search">
+  <button class="btn btn-danger" type="submit">Buscar</button>
+</form>
+
+      <!-- Menu de ícones -->
+      <div class="menu d-flex align-items-center gap-4">
+
+        <!-- Entrar / Cadastro -->
+        <div class="menu-item d-flex align-items-center gap-2">
+          <i class="fa-regular fa-user"></i>
+          <div>
+            <a href="entrar.html">Entre</a> ou <a href="long.html">cadastre-se</a>
+          </div>
         </div>
-      </div>
-      </div>
-      <div class="menu-item d-flex align-items-center gap-2">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <div>
-          <div><a href="pagamento.html">pagamento</a></div>
-          <div><a href="pagamento.html">$S</a></div>
+
+        <!-- Sacola -->
+        <div class="menu-item d-flex align-items-center gap-2 position-relative">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <div>
+            <a href="Carrinho.html">Sacola</a><br>
+            <span class="text-danger fw-bold">R$ 0,00</span>
+          </div>
+          <!-- Badge quantidade -->
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
         </div>
+
       </div>
     </div>
   </nav>
-
-  <!-- Categorias -->
-  <div class="bg-danger text-white py-2">
-    <div class="container d-flex justify-content-between flex-wrap">
-      <span class="fw-bold">Todas categorias</span>
-      <div>
-        <a href="#" class="text-white me-3">MAQUIAGEM</a>
-        <a href="#" class="text-white me-3">MÃOS E PÉS</a>
-        <a href="#" class="text-white me-3">CABELOS</a>
-      </div>
-    </div>
-  </div>
 
   <!-- Banner principal -->
   <div id="carouselPromo" class="carousel slide" data-bs-ride="carousel">
@@ -85,16 +85,17 @@
       <span class="visually-hidden">Próximo</span>
     </button>
   </div>
-     <!-- Produtos que trabalhamos-->
-      <div class="container my-5">
+
+  <!-- Marcas que trabalhamos -->
+  <div class="container my-5">
     <h2 class="mb-4">Marcas que trabalhamos</h2>
     <img src="img/18_catalogbrand_637641192372368167.webp" alt="" width="150" height="auto">
-        <img src="img/05_catalogbrand_637564204601109983 (1).webp " alt="" width="150" height="auto" >
-        <img src="img/14_catalogbrand_637641184719000724.webp" alt=" " width="150" height="auto">
-        <img src="img/15_catalogbrand_637641185347972803.webp" alt="" width="150" height="auto">
-      </div>
+    <img src="img/05_catalogbrand_637564204601109983 (1).webp" alt="" width="150" height="auto">
+    <img src="img/14_catalogbrand_637641184719000724.webp" alt="" width="150" height="auto">
+    <img src="img/15_catalogbrand_637641185347972803.webp" alt="" width="150" height="auto">
+  </div>
 
-  <!-- Produtos -->
+  <!-- Produtos em Destaque -->
   <div class="container my-5">
     <h2 class="mb-4">✨ Produtos em Destaque</h2>
     <div class="row">
@@ -116,7 +117,7 @@
           <div class="p-3">
             <h5>MASCAVO PRO SERIES 07 PINCEL DE MAQUIAGEM PARA ESFUMAR </h5>
             <strong class="text-danger">R$ 38,98</strong>
-        <a href="adionar2.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
+            <a href="adionar2.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
           </div>
         </div>
       </div>
@@ -126,8 +127,8 @@
           <img src="img/03 PINCEL DE MAQUIAGEM.webp" class="product-img w-100" alt="Secador Turbo">
           <div class="p-3">
             <h5>MASCAVO PRO SERIES 03 PINCEL DE MAQUIAGEM MULTIFUNCIONAL ROSTO</h5>
-            <strong class="text-danger">R$ 199,90</strong>
-             <a href="adionar3.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
+            <strong class="text-danger">R$ 97,98</strong>
+            <a href="adionar3.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
           </div>
         </div>
       </div>
@@ -137,19 +138,19 @@
           <img src="img/MASCAVO FLUSH STICK BLUSH EM BASTÃO PLUM 6G.webp" class="product-img w-100" alt="Paleta Maquiagem">
           <div class="p-3">
             <h5>MASCAVO FLUSH STICK BLUSH EM BASTÃO PLUM 6G</h5>
-            <strong class="text-danger">R$ 129,90</strong>
-           <a href="adionar4.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
+            <strong class="text-danger">R$ 91,98</strong>
+            <a href="adionar4.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-<!-- Produtos Eudora-->
+
+  <!-- Produtos Eudora -->
   <div class="container my-5">
     <h2 class="mb-4">Eudora</h2>
     <div class="row">
-
- <!-- Produto 1 -->
+      <!-- Produto 1 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/EUDORA SIÀGE ACELERA.webp" class="product-img w-100" alt="Kit Hidratação">
@@ -160,7 +161,7 @@
           </div>
         </div>
       </div>
- <!-- Produto 2 -->
+      <!-- Produto 2 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/EUDORA SIÀGE KIT MÁSCARA 250G + 2.webp" class="product-img w-100" alt="Kit Hidratação">
@@ -171,7 +172,7 @@
           </div>
         </div>
       </div>
-       <!-- Produto 3 -->
+      <!-- Produto 3 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/EUDORA SIÀGE CAUTERIZAÇÃO DOS LISOS LEAVE IN CAPILAR 100ML.webp" class="product-img w-100" alt="Kit Hidratação">
@@ -182,22 +183,25 @@
           </div>
         </div>
       </div>
-       <!-- Produto 4 -->
+      <!-- Produto 4 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/EUDORA SIÁGE RESGATE IMEDIATO MÁSCARA 250G.webp" class="product-img w-100" alt="Kit Hidratação">
           <div class="p-3">
-            <h5>EUDORA SIÀGE KIT MÁSCARA 250G + 2 POTENCIALIZADORES PRO CRONOLOGY 10ML</h5>
-            <strong class="text-danger">R$ 149,98</strong>
+            <h5>EUDORA SIÁGE 4D HIDRATAÇÃO MICELAR MÁSCARA 250G</h5>
+            <strong class="text-danger">R$ 81,98</strong>
             <a href="eudora4.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
           </div>
         </div>
       </div>
-<!-- Produtos WELLA-->
+    </div>
+  </div>
+
+  <!-- Produtos WELLA -->
   <div class="container my-5">
     <h2 class="mb-4">WELLA</h2>
     <div class="row">
- <!-- Produto 1 -->
+      <!-- Produto 1 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/COLOR PERFECT.webp" class="product-img w-100" alt="Kit Hidratação">
@@ -208,29 +212,29 @@
           </div>
         </div>
       </div>
- <!-- Produto 2 -->
+      <!-- Produto 2 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/WELLA BLONDE RECHARGE CONDICIONADOR 200ML (UN).webp" class="product-img w-100" alt="Kit Hidratação">
           <div class="p-3">
             <h5>WELLA BLONDE RECHARGE CONDICIONADOR 200ML (UN)</h5>
-            <strong class="text-danger">R$119,98</strong>
+            <strong class="text-danger">R$ 119,98</strong>
             <a href="wella2.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
           </div>
         </div>
       </div>
-       <!-- Produto 3 -->
+      <!-- Produto 3 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/WELLA BLONDE RECHARGE SHAMPOO 250ML (UN).webp" class="product-img w-100" alt="Kit Hidratação">
           <div class="p-3">
             <h5>WELLA BLONDE RECHARGE SHAMPOO 250ML (UN)</h5>
-            <strong class="text-danger">R$ 99,98 </strong>
+            <strong class="text-danger">R$ 99,98</strong>
             <a href="wella3.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
           </div>
         </div>
       </div>
-       <!-- Produto 4 -->
+      <!-- Produto 4 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/WELLA OIL REFLECTIONS LIGHT OLEO 100ML (UN).webp" class="product-img w-100" alt="Kit Hidratação">
@@ -241,24 +245,25 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-<!-- Produtos Boca Rosa-->
+  <!-- Produtos Boca Rosa -->
   <div class="container my-5">
     <h2 class="mb-4">Boca Rosa</h2>
     <div class="row">
-
- <!-- Produto 1 -->
+      <!-- Produto 1 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
-       <img src="img/Máscara para Cílios.webp" class="product-img w-100" alt="Kit Hidratação">
+          <img src="img/Máscara para Cílios.webp" class="product-img w-100" alt="Kit Hidratação">
           <div class="p-3">
             <h5>Máscara para Cílios</h5>
-            <strong class="text-danger">R$  59,90</strong>
+            <strong class="text-danger">R$ 59,90</strong>
             <a href="boca1.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
           </div>
         </div>
       </div>
- <!-- Produto 2 -->
+      <!-- Produto 2 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/Lip Combo.webp" class="product-img w-100" alt="Kit Hidratação">
@@ -269,7 +274,7 @@
           </div>
         </div>
       </div>
- <!-- Produto 3 -->
+      <!-- Produto 3 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/Kit Acessórios Essenciais.webp" class="product-img w-100" alt="Kit Hidratação">
@@ -280,10 +285,10 @@
           </div>
         </div>
       </div>
- <!-- Produto 4 -->
+      <!-- Produto 4 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
-      <img src="img/BOCA ROSA PÓ COMPACTO BR01 9G.webp" class="product-img w-100" alt="Kit Hidratação">
+          <img src="img/BOCA ROSA PÓ COMPACTO BR01 9G.webp" class="product-img w-100" alt="Kit Hidratação">
           <div class="p-3">
             <h5>BOCA ROSA PÓ COMPACTO BR01 9G</h5>
             <strong class="text-danger">R$ 74,98</strong>
@@ -291,24 +296,25 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Produtos Bruna tavares-->
+  <!-- Produtos Bruna Tavares -->
   <div class="container my-5">
-    <h2 class="mb-4">Bruna tavares</h2>
+    <h2 class="mb-4">Bruna Tavares</h2>
     <div class="row">
-
- <!-- Produto 1 -->
+      <!-- Produto 1 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
-       <img src="img/BRUNA TAVARES HYDRA PRIMER 40G.webp" class="product-img w-100" alt="Kit Hidratação">
+          <img src="img/BRUNA TAVARES HYDRA PRIMER 40G.webp" class="product-img w-100" alt="Kit Hidratação">
           <div class="p-3">
-            <h5>BRUNA TAVARES HYDRA PRIMER 40Gs</h5>
-            <strong class="text-danger">R$ 22,19+</strong>
+            <h5>BRUNA TAVARES HYDRA PRIMER 40G</h5>
+            <strong class="text-danger">R$ 22,19</strong>
             <a href="BRUNA1.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
           </div>
         </div>
       </div>
- <!-- Produto 2 -->
+      <!-- Produto 2 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/BRUNA TAVARES DISNEY 100 GLOSS LABIAL EMOTION 5G.webp" class="product-img w-100" alt="Kit Hidratação">
@@ -319,7 +325,7 @@
           </div>
         </div>
       </div>
- <!-- Produto 3 -->
+      <!-- Produto 3 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
           <img src="img/BRUNA TAVARES PRIMER FACIAL - BTBLUR.webp" class="product-img w-100" alt="Kit Hidratação">
@@ -330,10 +336,10 @@
           </div>
         </div>
       </div>
- <!-- Produto 4 -->
+      <!-- Produto 4 -->
       <div class="col-md-3 col-sm-6 mb-4">
         <div class="product-card h-100">
-      <img src="img/BRUNA TAVARES MÁSCARA PARA CÍLIOS - LUX LASH 8G.webp" class="product-img w-100" alt="Kit Hidratação">
+          <img src="img/BRUNA TAVARES MÁSCARA PARA CÍLIOS - LUX LASH 8G.webp" class="product-img w-100" alt="Kit Hidratação">
           <div class="p-3">
             <h5>BRUNA TAVARES MÁSCARA PARA CÍLIOS - BIG LASH 8G</h5>
             <strong class="text-danger">R$ 21,59</strong>
@@ -341,18 +347,6 @@
           </div>
         </div>
       </div>
-
-
-  <!-- Consulta CEP -->
-  <div class="container my-5">
-    <h4>Consulta de Endereço via CEP</h4>
-    <div class="mb-3">
-      <label for="cep" class="form-label">CEP:</label>
-      <input type="text" id="cep" class="form-control" placeholder="Digite o CEP">
-    </div>
-    <div class="mb-3">
-      <label for="endereco" class="form-label">Endereço:</label>
-      <input type="text" id="endereco" class="form-control" readonly>
     </div>
   </div>
 
@@ -372,20 +366,52 @@
         </div>
         <div class="col-md-4">
           <h5>Links Úteis</h5>
-          <p><a href="#">Política de Privacidade</a></p>
-          <p><a href="#">Trocas e Devoluções</a></p>
-          <p><a href="#">Termos de Uso</a></p>
+            <a href="Política.html">Política de Privacidade</a><br>
+          <a href="trocas.html">Trocas e Devoluções</a><br>
         </div>
       </div>
       <hr>
-      <p class="text-center mb-0">© 2025 BelShop - Todos os direitos reservados</p>
+      <p class="text-center mb-0">© 2025 Brilho na Pele - Todos os direitos reservados</p>
     </div>
   </footer>
 
-  <!-- Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5551999998888?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos!" 
+     target="_blank" 
+     class="whatsapp-button">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-  <!-- JavaScript Modular -->
+  <style>
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+    .whatsapp-button i {
+      margin: 0;
+    }
+  </style>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>

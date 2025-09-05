@@ -165,23 +165,27 @@
           <span class="estrela" onclick="avaliar(4)">★</span>
           <span class="estrela" onclick="avaliar(5)">★</span>
         </div>
-        <button onclick="alert('Produto adicionado ao carrinho!')">COMPRAR</button>
+
+        <!-- BOTÃO COMPRAR MODIFICADO -->
+        <a href="carrinho.html" 
+           onclick="adicionarAoCarrinho('Blush em Bastão - MASCAVO FLUSH STICK PLUM 6G', 91.98, event)" 
+           style="color: #ff69b4; text-decoration: none; font-weight: bold;">
+           COMPRAR
+        </a>
       </div>
     </div>
 
-     <hr style="margin: 40px 0;">
+    <hr style="margin: 40px 0;">
 
-<div class="descricao-longa">
-  <h2>📄 DESCRIÇÃO LONGA</h2>
-  <p style="margin-top: 10px;"><strong>MASCAVO SHAPE STICK CONTORNO EM BASTÃO LATTE 6G
-</strong></p>
-  <p>
-Contorno em bastão multiuso. Sua textura cream-to-powder (cremoso na aplicação e com aspecto de pó aveludado ao secar) desliza suavemente na pele e proporciona uma definição sutil, tornando a aplicação leve e fácil de construir.</p>
-  <p>Modo de uso: aplique o produto nas áreas do rosto em que deseja dar profundidade, como nas laterais do nariz, nas têmporas ou abaixo das maçãs do rosto. Em seguida, esfume com um pincel, esponja ou ponta dos dedos.
-</p>
-</div>
+    <div class="descricao-longa">
+      <h2>📄 DESCRIÇÃO LONGA</h2>
+      <p style="margin-top: 10px;"><strong>MASCAVO SHAPE STICK CONTORNO EM BASTÃO LATTE 6G</strong></p>
+      <p>Contorno em bastão multiuso. Sua textura cream-to-powder (cremoso na aplicação e com aspecto de pó aveludado ao secar) desliza suavemente na pele e proporciona uma definição sutil, tornando a aplicação leve e fácil de construir.</p>
+      <p>Modo de uso: aplique o produto nas áreas do rosto em que deseja dar profundidade, como nas laterais do nariz, nas têmporas ou abaixo das maçãs do rosto. Em seguida, esfume com um pincel, esponja ou ponta dos dedos.</p>
+    </div>
 
-<hr style="margin: 40px 0;">
+    <hr style="margin: 40px 0;">
+
     <div class="cep-box">
       <h2>Calcule seu Frete</h2>
       <input type="text" id="cep" placeholder="Digite o CEP">
@@ -232,6 +236,28 @@ Contorno em bastão multiuso. Sua textura cream-to-powder (cremoso na aplicaçã
         .catch(() => {
           resultado.innerHTML = '<p style="color: red;">Erro ao buscar o CEP.</p>';
         });
+    }
+
+    // NOVA FUNÇÃO: Adicionar produto ao carrinho e redirecionar
+    function adicionarAoCarrinho(nome, preco, event) {
+      event.preventDefault(); // Evita que o link abra antes do JS rodar
+
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+      // Verifica se o produto já existe e incrementa a quantidade
+      const index = carrinho.findIndex(item => item.nome === nome);
+      if(index >= 0){
+        carrinho[index].quantidade += 1;
+      } else {
+        carrinho.push({nome, preco, quantidade: 1});
+      }
+
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      alert('Produto adicionado ao carrinho!');
+
+      // Redireciona para Carrinho.html
+      window.location.href = "Carrinho.html";
     }
   </script>
 </body>
