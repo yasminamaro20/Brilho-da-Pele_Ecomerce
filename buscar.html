@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados da Busca - Brilho na Pele</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h2 class="mb-4">Resultados da sua busca</h2>
+
+    <!-- Botão voltar -->
+    <a href="index.html" class="btn btn-secondary mb-4">
+      ⬅ Voltar para a Loja
+    </a>
+
+    <!-- Área onde os resultados aparecerão -->
+    <div id="resultados" class="row g-4"></div>
+  </div>
+
+ <!-- Produto 1 -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="product-card h-100">
+          <img src="img/EUDORA SIÀGE ACELERA.webp" class="product-img w-100" alt="Kit Hidratação">
+          <div class="p-3">
+            <h5>EUDORA SIÀGE ACELERA O CRESCIMENTO MÁSCARA DE TRATAMENTO V3 250G</h5>
+            <strong class="text-danger">R$ 81,98</strong>
+            <a href="Carrinho.html" class="btn btn-sm btn-outline-danger w-100 mt-2">Adicionar ao Carrinho</a>
+          </div>
+        </div>
+      </div>
+
+  <script>
+    // Captura o termo da URL (?q=batom)
+    const params = new URLSearchParams(window.location.search);
+    const termoBusca = params.get("q") ? params.get("q").toLowerCase() : "";
+
+    const resultadosDiv = document.getElementById("resultados");
+
+    if (termoBusca) {
+      const encontrados = produtos.filter(p => p.nome.toLowerCase().includes(termoBusca));
+
+      if (encontrados.length > 0) {
+        encontrados.forEach(p => {
+          resultadosDiv.innerHTML += `
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100">
+                <img src="${p.imagem}" class="card-img-top" alt="${p.nome}">
+                <div class="card-body">
+                  <h5 class="card-title">${p.nome}</h5>
+                  <p class="card-text text-danger fw-bold">${p.preco}</p>
+                  <button class="btn btn-danger">Adicionar ao carrinho</button>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      } else {
+        resultadosDiv.innerHTML = `<p class="text-muted">Nenhum produto encontrado para "<strong>${termoBusca}</strong>".</p>`;
+      }
+    } else {
+      resultadosDiv.innerHTML = `<p class="text-muted">Você não digitou nada na busca.</p>`;
+    }
+  </script>
+
+</body>
+</html>
